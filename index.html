@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nexora — A premium agency crafting digital experiences that inspire, engage, and convert. Explore our services, learn our story, and let's build something great together." />
+  <meta name="keywords" content="web design, digital agency, UI/UX, development, branding, Nexora" />
+  <meta property="og:title" content="Nexora — Digital Experiences, Reimagined" />
+  <meta property="og:description" content="We craft stunning digital products that inspire and convert." />
+  <meta property="og:type" content="website" />
+  <title>Nexora — Digital Experiences, Reimagined</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       SCROLL PROGRESS INDICATOR
+  ═══════════════════════════════════════ -->
+  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION BAR
+  ═══════════════════════════════════════ -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Primary navigation">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Nexora — Go to homepage">
+        <span class="logo-icon" aria-hidden="true">⬡</span>
+        <span class="logo-text">Nexora</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" role="list" id="nav-list">
+        <li><a href="#home"     class="nav-link active" data-section="home"     aria-current="page">Home</a></li>
+        <li><a href="#about"    class="nav-link"        data-section="about"               >About</a></li>
+        <li><a href="#services" class="nav-link"        data-section="services"            >Services</a></li>
+        <li><a href="#contact"  class="nav-link"        data-section="contact"             >Contact</a></li>
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="nav-controls">
+        <!-- Dark / Light toggle -->
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <span class="theme-icon theme-icon--dark"  aria-hidden="true">🌙</span>
+          <span class="theme-icon theme-icon--light" aria-hidden="true">☀️</span>
+        </button>
+
+        <!-- Hamburger (mobile) -->
+        <button
+          id="hamburger"
+          class="hamburger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <ul class="mobile-nav-links" role="list">
+        <li><a href="#home"     class="mobile-nav-link" data-section="home"    >Home</a></li>
+        <li><a href="#about"    class="mobile-nav-link" data-section="about"   >About</a></li>
+        <li><a href="#services" class="mobile-nav-link" data-section="services">Services</a></li>
+        <li><a href="#contact"  class="mobile-nav-link" data-section="contact" >Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════ -->
+    <section id="home" class="hero-section" aria-label="Hero">
+      <!-- Parallax background layers -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="hero-content reveal">
+        <p class="hero-eyebrow">✦ Welcome to the future of digital</p>
+        <h1 class="hero-heading">
+          Digital Experiences,<br />
+          <span class="gradient-text">Reimagined.</span>
+        </h1>
+        <p class="hero-sub">
+          We design and build products that captivate, convert, and endure.
+          From bold brand identities to seamless digital interfaces — let's
+          create something extraordinary together.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#services" class="btn btn--primary" aria-label="Explore our services">
+            Explore Services
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#about" class="btn btn--ghost" aria-label="Learn more about Nexora">
+            Our Story
+          </a>
+        </div>
+
+        <!-- Scroll hint -->
+        <div class="scroll-hint" aria-hidden="true">
+          <span class="scroll-dot"></span>
+          <span class="scroll-label">Scroll to explore</span>
+        </div>
+      </div>
+
+      <!-- Floating stat cards -->
+      <div class="hero-stats" aria-label="Key statistics">
+        <div class="stat-card reveal" style="--delay: 0.1s">
+          <span class="stat-number">150<span class="stat-plus">+</span></span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-card reveal" style="--delay: 0.2s">
+          <span class="stat-number">98<span class="stat-plus">%</span></span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-card reveal" style="--delay: 0.3s">
+          <span class="stat-number">12<span class="stat-plus">+</span></span>
+          <span class="stat-label">Years of Craft</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════ -->
+    <section id="about" class="about-section section" aria-label="About us">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// Who we are</span>
+          <h2 class="section-title">We are <span class="gradient-text">Nexora</span></h2>
+          <p class="section-desc">A collective of passionate designers, engineers, and strategists united by a single mission — to push the boundaries of digital possibility.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Visual column -->
+          <div class="about-visual reveal">
+            <div class="about-image-wrapper">
+              <div class="about-image-blob" aria-hidden="true"></div>
+              <div class="about-image-card glass-card">
+                <div class="mock-screen" aria-hidden="true">
+                  <div class="mock-bar"></div>
+                  <div class="mock-body">
+                    <div class="mock-line mock-line--wide"></div>
+                    <div class="mock-line mock-line--med"></div>
+                    <div class="mock-line mock-line--short"></div>
+                    <div class="mock-pills">
+                      <span class="mock-pill"></span>
+                      <span class="mock-pill"></span>
+                      <span class="mock-pill"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="about-badge glass-card" aria-hidden="true">
+                <span class="badge-icon">🏆</span>
+                <div>
+                  <strong>Award Winning</strong>
+                  <small>Design Studio 2024</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text column -->
+          <div class="about-text reveal" style="--delay: 0.2s">
+            <h3 class="about-subtitle">Craft over convention.</h3>
+            <p class="about-body">We believe great digital products aren't just functional — they're felt. Every pixel, every interaction, every transition is intentional. We obsess over the details so your users never have to think about them.</p>
+            <p class="about-body">From Fortune 500 companies to ambitious startups, we've partnered with organizations worldwide to transform their digital presence and accelerate growth.</p>
+            <div class="about-values">
+              <div class="value-item">
+                <span class="value-icon" aria-hidden="true">⚡</span>
+                <span>Performance-first</span>
+              </div>
+              <div class="value-item">
+                <span class="value-icon" aria-hidden="true">♿</span>
+                <span>Accessible by design</span>
+              </div>
+              <div class="value-item">
+                <span class="value-icon" aria-hidden="true">🎯</span>
+                <span>Conversion focused</span>
+              </div>
+              <div class="value-item">
+                <span class="value-icon" aria-hidden="true">🔒</span>
+                <span>Security minded</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn--primary" style="margin-top:2rem" aria-label="Get in touch with Nexora">Let's Talk →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SERVICES SECTION
+    ═══════════════════════════════════════ -->
+    <section id="services" class="services-section section" aria-label="Our services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// What we do</span>
+          <h2 class="section-title">Services Built to <span class="gradient-text">Scale</span></h2>
+          <p class="section-desc">End-to-end digital solutions — from concept to deployment and beyond. Everything your brand needs to thrive in the digital landscape.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card glass-card reveal" style="--delay: 0.05s" aria-label="UI/UX Design service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon" aria-hidden="true">🎨</div>
+            <h3 class="card-title">UI / UX Design</h3>
+            <p class="card-desc">Human-centred design that balances beauty with usability. From wireframes to high-fidelity prototypes that delight users.</p>
+            <ul class="card-features" aria-label="UI/UX Design features">
+              <li>User Research & Personas</li>
+              <li>Wireframing & Prototyping</li>
+              <li>Design Systems</li>
+            </ul>
+            <span class="card-link" aria-hidden="true">Learn more →</span>
+          </article>
+
+          <article class="service-card glass-card reveal" style="--delay: 0.15s" aria-label="Web Development service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon" aria-hidden="true">💻</div>
+            <h3 class="card-title">Web Development</h3>
+            <p class="card-desc">Scalable, performant web applications built with modern stacks. Clean code, best practices, and lightning-fast delivery.</p>
+            <ul class="card-features" aria-label="Web Development features">
+              <li>React / Next.js / Vue</li>
+              <li>Node.js & REST / GraphQL</li>
+              <li>Performance Optimization</li>
+            </ul>
+            <span class="card-link" aria-hidden="true">Learn more →</span>
+          </article>
+
+          <article class="service-card glass-card reveal featured-card" style="--delay: 0.25s" aria-label="Brand Identity service">
+            <div class="card-badge">Popular</div>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon" aria-hidden="true">✦</div>
+            <h3 class="card-title">Brand Identity</h3>
+            <p class="card-desc">Strategic branding that tells your story and builds trust. A cohesive visual language across every touchpoint.</p>
+            <ul class="card-features" aria-label="Brand Identity features">
+              <li>Logo & Visual Identity</li>
+              <li>Brand Guidelines</li>
+              <li>Motion & Illustration</li>
+            </ul>
+            <span class="card-link" aria-hidden="true">Learn more →</span>
+          </article>
+
+          <article class="service-card glass-card reveal" style="--delay: 0.35s" aria-label="Mobile Apps service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon" aria-hidden="true">📱</div>
+            <h3 class="card-title">Mobile Apps</h3>
+            <p class="card-desc">Cross-platform mobile experiences that feel native. iOS and Android apps that users love to open every day.</p>
+            <ul class="card-features" aria-label="Mobile Apps features">
+              <li>React Native & Flutter</li>
+              <li>App Store Optimization</li>
+              <li>Push & Analytics</li>
+            </ul>
+            <span class="card-link" aria-hidden="true">Learn more →</span>
+          </article>
+
+          <article class="service-card glass-card reveal" style="--delay: 0.45s" aria-label="Digital Strategy service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon" aria-hidden="true">📊</div>
+            <h3 class="card-title">Digital Strategy</h3>
+            <p class="card-desc">Data-driven strategy that aligns digital initiatives with business goals. From SEO to conversion rate optimization.</p>
+            <ul class="card-features" aria-label="Digital Strategy features">
+              <li>SEO & Content Strategy</li>
+              <li>Analytics & Reporting</li>
+              <li>Growth Hacking</li>
+            </ul>
+            <span class="card-link" aria-hidden="true">Learn more →</span>
+          </article>
+
+          <article class="service-card glass-card reveal" style="--delay: 0.55s" aria-label="AI Integration service">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-icon" aria-hidden="true">🤖</div>
+            <h3 class="card-title">AI Integration</h3>
+            <p class="card-desc">Harness the power of AI to automate, personalise, and scale your product. Practical AI that delivers real ROI.</p>
+            <ul class="card-features" aria-label="AI Integration features">
+              <li>LLM & Chatbot Integration</li>
+              <li>Recommendation Engines</li>
+              <li>Predictive Analytics</li>
+            </ul>
+            <span class="card-link" aria-hidden="true">Learn more →</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TESTIMONIALS STRIP
+    ═══════════════════════════════════════ -->
+    <section class="testimonials-section section" aria-label="Client testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// Kind words</span>
+          <h2 class="section-title">Trusted by <span class="gradient-text">Innovators</span></h2>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card glass-card reveal" style="--delay:0.1s">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Nexora completely transformed our digital presence. The attention to detail and speed of delivery was unlike anything we'd experienced."</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">SR</div>
+              <div>
+                <strong>Sarah Reynolds</strong>
+                <small>CEO, Luminary Tech</small>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card glass-card reveal" style="--delay:0.2s">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Working with Nexora felt like having an in-house team that genuinely cared about our product. The results speak for themselves — 3× conversion rate."</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">MK</div>
+              <div>
+                <strong>Marcus Kim</strong>
+                <small>Founder, Velox App</small>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card glass-card reveal" style="--delay:0.3s">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"The team's expertise in both design and development is rare. They shipped our entire platform in 8 weeks — on time, on budget, and beyond expectations."</p>
+            <footer class="testimonial-author">
+              <div class="author-avatar" aria-hidden="true">AL</div>
+              <div>
+                <strong>Amelia Laurent</strong>
+                <small>Product Lead, Cirrus AI</small>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════ -->
+    <section id="contact" class="contact-section section" aria-label="Contact us">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// Get in touch</span>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Great</span></h2>
+          <p class="section-desc">Have a project in mind? We'd love to hear about it. Drop us a message and we'll get back to you within 24 hours.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact info -->
+          <div class="contact-info reveal">
+            <div class="contact-item glass-card" style="--delay:0.1s">
+              <span class="contact-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>San Francisco, CA — Remote Worldwide</p>
+              </div>
+            </div>
+            <div class="contact-item glass-card" style="--delay:0.2s">
+              <span class="contact-icon" aria-hidden="true">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:hello@nexora.io">hello@nexora.io</a></p>
+              </div>
+            </div>
+            <div class="contact-item glass-card" style="--delay:0.3s">
+              <span class="contact-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+14155000000">+1 (415) 500-0000</a></p>
+              </div>
+            </div>
+            <div class="social-links" aria-label="Social media links">
+              <a href="#" class="social-btn" aria-label="Follow Nexora on Twitter">𝕏</a>
+              <a href="#" class="social-btn" aria-label="Connect on LinkedIn">in</a>
+              <a href="#" class="social-btn" aria-label="View work on Dribbble">🏀</a>
+              <a href="#" class="social-btn" aria-label="View code on GitHub">⌥</a>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <form id="contact-form" class="contact-form glass-card reveal" style="--delay:0.2s" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" aria-required="true" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" aria-label="Email subject" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submit-btn" aria-label="Send your message">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+            <p id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="nav-logo footer-logo" aria-label="Back to top">
+          <span class="logo-icon" aria-hidden="true">⬡</span>
+          <span class="logo-text">Nexora</span>
+        </a>
+        <p class="footer-copy">© 2026 Nexora. Crafted with ♥ and relentless attention to detail.</p>
+        <a href="#home" class="back-to-top" id="back-to-top" aria-label="Scroll back to top">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
